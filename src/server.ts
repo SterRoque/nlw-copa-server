@@ -22,7 +22,7 @@ async function bootstrap() {
     })
 
     fastify.get("/users/count", async () => {
-        const count = await prisma.pool.count()
+        const count = await prisma.user.count()
         return { count }
     })
 
